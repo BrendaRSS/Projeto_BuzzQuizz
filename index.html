@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>BuzzQuizz</title>
+</head>
+<body>
+
+    <header>
+        <h1>BuzzQuizz</h1>
+    </header>
+
+<!-- TELA 1: TODOS OS QUIZZES-->
+    <div class = 'conteudo-principal'>
+  
+        <div class = 'criar-quizz'>
+            <span>Você não criou nenhum</span>
+            <span>quizz ainda :(</span>
+            <button onclick="criarQuizz()">Criar quizz</button>
+        </div>
+
+        <div class = 'container'>
+        
+            <div class = 'seus-quizzes none'> 
+                <div class="titulo-seus-quizzes"> 
+                    <h2>Seus Quizzes</h2> 
+                    <ion-icon name="add-circle" onclick="criaQuizz()"></ion-icon>
+                </div>
+                <ul class = lista-seus-quizzes>
+
+                </ul>
+            </div>
+
+            <div class = 'todos-os-quizzes'>
+                <h2>Todos os Quizzes</h2>
+                <ul class = lista-quizzes>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- TELA 2: UM QUIZZ-->
+        <div class = 'container-quizz none'>
+            <div class = 'banner-quizz'>
+
+            </div>
+
+            <div class = 'feed-quizz'> 
+                              
+            </div>
+
+            <div class = 'box-final none' >
+                  
+            </div>
+            <button class = 'reiniciar-quizz' onclick = 'reiniciarQuizz()'>Reiniciar quizz</button> 
+            <button class = 'home' onclick = 'voltarHome()'>Voltar pra home</button>          
+        </div>                
+
+    <!-- TELA 3.1: CRIAÇÃO DE QUIZ-->
+
+    <div class="criando-quizz none">
+        <div class="caracteristicas-gerais-quizz"> 
+            <div class="titulo-comeco"><b>Comece pelo começo</b></div>
+            <div class="inputs-das-caracteristicas">
+                <input type="text" class="Título-Quizz" placeholder="Título do seu quizz">
+                <input type="text" class="URL-Quizz" placeholder="URL da imagem do seu quizz">
+                <input type="text" class="quantidade-perguntas" placeholder="Quantidade de perguntas do quizz">
+                <input type="text" class="niveis-Quizz" placeholder="Quantidade de níveis do quizz">
+            </div> 
+        </div>
+        <button class="prosseguir" onclick="criePerguntas()">Prosseguir para criar perguntas</button>
+    </div>
+
+    <!-- TELA 3.2: PERGUNTAS DO QUIZZ-->
+
+    <div class="tela-criando-perguntas-quizz none">
+        <div class="criando-perguntas">
+            <div class="titulo-comeco">Crie suas perguntas</div>
+            <ul class="container-perguntas">
+               
+            </ul>
+
+            <button class="prosseguir" onclick="validarQuestoes()">Prosseguir para criar níveis</button>
+        </div>
+    </div>
+
+    <!-- TELA 3.3: NÍVEIS DO QUIZZ-->
+
+    <div class="niveis-do-quizz none">
+        <div class="criando-níveis">
+            <div class="titulo-comeco">Agora, decida os níveis!</div>
+            <ul class="container-perguntas ulNiveisQuizz">
+               
+            </ul>
+
+            <button class="prosseguir" onclick="validarNiveis()">Finalizar Quizz</button>
+        </div>
+    </div>
+
+    <!-- TELA 3.4: SUCESSO DO QUIZZ-->
+    <ul class="ul-sucesso-quizz none">
+        
+    </ul>
+   
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
